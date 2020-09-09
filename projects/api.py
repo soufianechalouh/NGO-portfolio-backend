@@ -3,7 +3,7 @@ from .models import Project
 from .serializers import ProjectSerializer
 
 
-class ProjectsAPI(viewsets.ModelViewSet):
+class ProjectsViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     permissions = [
         permissions.AllowAny
