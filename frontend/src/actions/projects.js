@@ -1,10 +1,15 @@
-import axios from 'axios';
+import axios from "axios";
 
+import {GET_PROJECTS} from "./types";
 
-export const getProjects = () => {
+//  GET PROJECTS
 
+export const getProjects = () => dispatch => {
     axios.get('/api/projects/')
-        .then(res => {
-            console.log(res)
-        })
+        .then(res =>{
+            dispatch({
+                type: GET_PROJECTS,
+                payload: res.data
+            });
+        }).catch(err => console.log(err));
 }
