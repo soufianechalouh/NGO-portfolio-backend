@@ -11,16 +11,27 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 10,
         height: 250,
+        textAlign: 'center'
     },
     img: {
-        marginTop: 70
+        width: 350,
+        marginTop: 40,
+        marginBottom: 30
+    },
+    a: {
+        textDecoration:'none',
+        color: 'black',
+        fontFamily: 'Helvetica',
+        margin: '5px',
+        fontWeight: 500
+
     }
 }));
 
 const Header = (props) => {
     const {
     logo,
-
+    a
     } = props.classes;
     const classes = useStyles();
 
@@ -29,11 +40,11 @@ const Header = (props) => {
                 <div className={classes.root}>
                 <img  className={classes.img} src={Logo} alt=""/>
                 <br/>
-                    <NavLink to="/pro">
+                    <NavLink to="/pro" className={classes.a} style={{fontWeight: 600}}>
                         Projects
                     </NavLink>
-                    <a href="https://www.google.com"> About us</a> .
-                    <a href="https://www.google.com"> Contact us</a>
+                    <a className={classes.a} href="https://www.google.com" > Who are we</a>
+                    <a className={classes.a} href="https://www.google.com"> Contact us</a>
                 </div>
 
                 {/*<div className={logo}>*/}
