@@ -12,7 +12,7 @@ const styles = {
     control: {
         padding: '2px',
     },
-    project: {
+    project_class: {
         height:450,
         margin:10,
         display: 'flex',

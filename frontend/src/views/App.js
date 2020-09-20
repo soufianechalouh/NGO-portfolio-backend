@@ -10,11 +10,16 @@ import {Provider} from "react-redux";
 import store from "../store";
 
 
+const bodyStyle = {
+  fontFamily: 'Helvetica',
+};
+
 class App extends Component {
+
     render() {
         return (
             <Provider store={store}>
-                <div className="App">
+                <div className="App" style={bodyStyle}>
                     <Header/>
                     <Switch>
                         <Route exact path="/" component={ProjectsGrid} />

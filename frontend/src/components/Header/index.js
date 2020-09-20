@@ -47,13 +47,6 @@ const Header = (props) => {
                     <a className={classes.a} href="https://www.google.com"> Contact us</a>
                 </div>
 
-                {/*<div className={logo}>*/}
-                {/*    <Image*/}
-                {/*        src={Logo}*/}
-                {/*        width='100px'*/}
-                {/*        disableSpinner*/}
-                {/*    />*/}
-                {/*</div>*/}
             </Fragment>
         );
 }

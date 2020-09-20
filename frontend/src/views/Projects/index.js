@@ -24,7 +24,7 @@ export class ProjectsGrid extends Component{
         const {
           root,
           control,
-          project,
+          project_class,
           description,
           centered,
           img,
@@ -35,67 +35,18 @@ export class ProjectsGrid extends Component{
                 <Grid item xs={12}>
 
                     <Grid container justify="center">
-                        <Grid item md={6}>
-                            <Card  className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/77410369_2399736020339166_4673256178501812224_o.jpg"
-                                     alt=""/>
-                            </Card>
-                        </Grid>
-                        <Grid item md={6}>
-                            <Card className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/17308754_1307772549283244_3687166335795436735_n.jpg"
-                                     alt=""/>
-                            </Card>
-                        </Grid>
-                        <Grid item md={6}>
-                            <Card className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/32150010_431713200609901_1379425096111751168_n.jpg"
-                                     alt=""/>
-                            </Card>
-                        </Grid>
-                        <Grid item md={6}>
-                            <Card className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/78482454_486020682010629_1984186062238384128_o.jpg"
-                                     alt=""/>
-                            </Card>
-                        </Grid>
-                        {/*{[0, 1, 2, 3].map((value) => (*/}
-                        {/*    <Grid*/}
-                        {/*        key={value}*/}
-                        {/*        item md={6}*/}
-                        {/*        color={background}*/}
-                        {/*    >*/}
-                        {/*        <Card className={classes.project} variant="outlined">*/}
-                        {/*            <img className={classes.img}*/}
-                        {/*                 src="https://s3-img.pixpa.com/com/large/20669/1558470795-579679-6ms2.jpg"*/}
-                        {/*                 alt=""/>*/}
-                        {/*            <div className={classes.description}>*/}
-                        {/*                <span className={classes.centered}>TestText</span>*/}
-                        {/*            </div>*/}
-                        {/*        </Card>*/}
-                        {/*    </Grid>*/}
-                        {/*))}*/}
-                        <Grid item md={6}>
-                            <Card className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/77410369_2399736020339166_4673256178501812224_o.jpg"
-                                     alt=""/>
-                            </Card>
-                        </Grid>
-                        <Grid item md={6}>
-                            <Card className={project} variant="outlined">
-                                <img className={img}
-                                     src="./media/thumbnails/24785038_1725035647536086_2375177550733934884_o.jpg"
-                                     alt=""/>
+                        {this.props.projects.map(project => (
+                            <Grid item md={6}>
+                                <Card  className={project_class} variant="outlined">
+                                    <img className={img}
+                                         src={project.thumbnail}
+                                         alt=""/>
                                      <div className={description}>
-                                        <span >TestText</span>
+                                        <span className={centered} >{project.name}</span>
                                     </div>
-                            </Card>
-                        </Grid>
+                                </Card>
+                            </Grid>
+                        ))}
                     </Grid>
                 </Grid>
             </div>
