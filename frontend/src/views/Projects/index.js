@@ -1,5 +1,4 @@
-import React, {Component, useState} from "react";
-import {makeStyles} from "@material-ui/core/styles";
+import React, {Component} from "react";
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import {connect} from "react-redux";
@@ -14,6 +13,10 @@ import {withStyles} from "@material-ui/styles";
 export class ProjectsGrid extends Component{
     static propTypes = {
         projects: PropTypes.array.isRequired
+    }
+
+    componentDidMount() {
+        this.props.getProjects();
     }
 
     render() {
@@ -104,5 +107,5 @@ const mapStateToProps = state => ({
     projects: state.projects.projects
 })
 
-export default connect(mapStateToProps)(withStyles(styles)(ProjectsGrid));
+export default connect(mapStateToProps, {getProjects})(withStyles(styles)(ProjectsGrid));
 // export default ProjectsGrid;
