@@ -1,12 +1,19 @@
 const styles = {
     root: {
-        flexGrow: 10,
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: 'white',
+    },
+    gridList: {
+        width: 1200,
     },
     control: {
-        padding: 2,
+        padding: '2px',
     },
-    project: {
-        maxHeight:500,
+    project_class: {
+        height:450,
         margin:10,
         display: 'flex',
         justifyContent: 'center',
@@ -38,11 +45,10 @@ const styles = {
 
     },
     img: {
-        width: '100%',
         flexShrink: 0,
-        minWidth: '100%',
-        minHeight: '100%',
-
-    }
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        },
 }
 export default styles;
