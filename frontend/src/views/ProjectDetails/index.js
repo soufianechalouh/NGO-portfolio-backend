@@ -1,12 +1,27 @@
-import React from "react";
+import React, {Component} from "react";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
 
-const ProjectDetails = (props) =>{
 
-    return(
-        <div>
-            Project detail
-        </div>
-    )
+export class ProjectDetails extends Component {
+
+    static propTypes = {
+        projects: PropTypes.array.isRequired
+    }
+
+    render() {
+        return(
+            <div>
+                Project detail
+            </div>
+        )
+    }
 }
 
-export default ProjectDetails;
+const mapStateToProps = state => (
+    {
+        projects: state.projects.projects
+    }
+)
+
+export default connect(mapStateToProps)(ProjectDetails);
