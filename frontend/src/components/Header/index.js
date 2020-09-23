@@ -40,7 +40,7 @@ const Header = (props) => {
                 <div className={classes.root}>
                 <img  className={classes.img} src={Logo} alt=""/>
                 <br/>
-                    <NavLink to="/pro" className={classes.a} style={{fontWeight: 600}}>
+                    <NavLink to="/1" className={classes.a} style={{fontWeight: 600}}>
                         Projects
                     </NavLink>
                     <a className={classes.a} href="https://www.google.com" > Who are we</a>

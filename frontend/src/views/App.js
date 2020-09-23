@@ -23,7 +23,7 @@ class App extends Component {
                     <Header/>
                     <Switch>
                         <Route exact path="/" component={ProjectsGrid} />
-                        <Route exact path="/pro" component={ProjectDetails} />
+                        <Route exact path="/:id?" component={ProjectDetails} />
                         <Route render={() => ""} />
                     </Switch>
                 </div>
