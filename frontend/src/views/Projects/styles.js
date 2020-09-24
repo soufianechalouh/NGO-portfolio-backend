@@ -31,6 +31,25 @@ const styles = {
 
 
     },
+    project_link: {
+        height:450,
+        width:'100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        position: 'relative',
+        textAlign: 'center',
+        color: 'black',
+        '&:hover $img': {
+            opacity: 0.5
+        },
+        '&:hover $description': {
+            opacity: 1
+        }
+
+
+    },
     description: {
         position: 'absolute',
         width: '100%',

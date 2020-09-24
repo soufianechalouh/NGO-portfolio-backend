@@ -8,6 +8,7 @@ import styles from './styles';
 
 import PropTypes from 'prop-types';
 import {withStyles} from "@material-ui/styles";
+import {Link} from "react-router-dom";
 
 
 export class ProjectsGrid extends Component{
@@ -25,6 +26,7 @@ export class ProjectsGrid extends Component{
           root,
           control,
           project_class,
+          project_link,
           description,
           centered,
           img,
@@ -36,16 +38,21 @@ export class ProjectsGrid extends Component{
 
                     <Grid container justify="center">
                         {this.props.projects.map(project => (
-                            <Grid item md={6}>
-                                <Card  className={project_class} variant="outlined">
-                                    <img className={img}
-                                         src={project.thumbnail}
-                                         alt=""/>
-                                     <div className={description}>
-                                        <span className={centered} >{project.name}</span>
-                                    </div>
-                                </Card>
-                            </Grid>
+
+                            // <NavLink to={"/"+project.id}>
+                                <Grid item md={6}>
+                                    <Card  className={project_class} variant="outlined">
+                                        <Link to={"/"+project.id} className={project_link}>
+                                            <img className={img}
+                                                 src={project.thumbnail}
+                                                 alt=""/>
+                                             <div className={description}>
+                                                <span className={centered} >{project.name}</span>
+                                            </div>
+                                        </Link>
+                                    </Card>
+                                </Grid>
+                            // </NavLink>
                         ))}
                     </Grid>
                 </Grid>
