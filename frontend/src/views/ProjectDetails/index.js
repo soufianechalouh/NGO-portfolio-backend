@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
+import styles from "./styles";
 
+import {withStyles} from "@material-ui/styles";
 
 export class ProjectDetails extends Component {
 
@@ -24,10 +26,20 @@ export class ProjectDetails extends Component {
         );
     }
     render() {
+        const {
+          container,
+          project_title,
+          project_description,
+        } = this.props.classes;
 
         return(
-            <div>
+            <div className={container}>
+                <h1 className={project_title}>
                 Project detail {this.state.projectDetails.name}
+                </h1>
+                <div className={project_description} dangerouslySetInnerHTML={{ __html: this.state.projectDetails.description }} >
+
+                </div>
             </div>
         )
     }
@@ -39,4 +51,4 @@ const mapStateToProps = state => (
     }
 )
 
-export default connect(mapStateToProps)(ProjectDetails);
+export default connect(mapStateToProps)(withStyles(styles)(ProjectDetails));
