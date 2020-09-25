@@ -13,7 +13,7 @@ const styles = {
         padding: '2px',
     },
     project_class: {
-        height:450,
+        height:500,
         margin:10,
         display: 'flex',
         justifyContent: 'center',
@@ -32,7 +32,7 @@ const styles = {
 
     },
     project_link: {
-        height:450,
+        height:'100%',
         width:'100%',
         display: 'flex',
         justifyContent: 'center',
