@@ -2,12 +2,15 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Header from "../components/Header";
+import Acceuil from "../components/Acceuil";
 import ProjectsGrid from "./Projects";
 import ProjectDetails from "./ProjectDetails";
 
 import {Provider} from "react-redux";
 
+
 import store from "../store";
+import { HomeOutlined } from '@material-ui/icons';
 
 
 const bodyStyle = {
@@ -22,9 +25,11 @@ class App extends Component {
                 <div className="App" style={bodyStyle}>
                     <Header/>
                     <Switch>
+                    
                         <Route exact path="/" component={ProjectsGrid} />
+                        <Route exact path="/Acceuil" component={Acceuil} />
                         <Route exact path="/:id?" component={ProjectDetails} />
-                        <Route render={() => ""} />
+                       <Route render={() => ""} /> 
                     </Switch>
                 </div>
             </Provider>
