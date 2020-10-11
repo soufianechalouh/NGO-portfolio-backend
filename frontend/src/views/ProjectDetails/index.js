@@ -35,7 +35,7 @@ export class ProjectDetails extends Component {
         return(
             <div className={container}>
                 <h1 className={project_title}>
-                Project detail {this.state.projectDetails.name}
+                {this.state.projectDetails.name}
                 </h1>
                 <div className={project_description} dangerouslySetInnerHTML={{ __html: this.state.projectDetails.description }} >
 
