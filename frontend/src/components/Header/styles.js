@@ -5,6 +5,7 @@ const styles ={
     },
     a:{
        textDecoration:'none'
-    }
+    },
+  
 }
 export default styles;

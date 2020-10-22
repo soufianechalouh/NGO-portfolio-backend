@@ -4,7 +4,8 @@ import Card from '@material-ui/core/Card';
 import {connect} from "react-redux";
 import {getProjects} from "../../actions/projects"
 import styles from './styles';
-
+import Carousel from 'react-bootstrap/Carousel'
+import logo from '../../assets/logo.png';
 
 import PropTypes from 'prop-types';
 import {withStyles} from "@material-ui/styles";
@@ -15,6 +16,8 @@ export class ProjectsGrid extends Component{
     static propTypes = {
         projects: PropTypes.array.isRequired
     }
+
+   
 
     componentDidMount() {
         this.props.getProjects();
@@ -34,7 +37,9 @@ export class ProjectsGrid extends Component{
         return (
             // <div className={classes.root}>
             <div>
-                <Grid item xs={12}>
+                
+                   
+             <Grid item xs={12}>
 
                     <Grid container justify="center">
                         {this.props.projects.map(project => (
@@ -55,7 +60,7 @@ export class ProjectsGrid extends Component{
                             // </NavLink>
                         ))}
                     </Grid>
-                </Grid>
+                        </Grid>
             </div>
         )
     }

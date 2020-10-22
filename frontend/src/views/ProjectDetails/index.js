@@ -34,6 +34,7 @@ export class ProjectDetails extends Component {
 
         return(
             <div className={container}>
+                
                 <h1 className={project_title}>
                 {this.state.projectDetails.name}
                 </h1>
